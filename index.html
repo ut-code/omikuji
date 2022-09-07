@@ -8,7 +8,9 @@
     <link rel="manifest" href="./manifest.json">
 </head>
 <body>
-    <h1>テストです！</h1>
+    <h1>おみくじをつくろう！</h1>
+    <img id="omikuji-image" src="./omikuji-box.png" alt="おみくじの箱">
+    <button id="omikuji-button">おみくじを引く</button>
     <script>
         if ('serviceWorker' in navigator) {
           navigator.serviceWorker.register('./sw.js').then(function(registration) {
@@ -18,5 +20,6 @@
           });
         }
       </script>
+      <script src="./script.js"></script>
 </body>
 </html>
