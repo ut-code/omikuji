@@ -2,11 +2,13 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PWA-TEST</title>
+    <link rel="stylesheet" href="./style.css">
     <link rel="manifest" href="./manifest.json">
 </head>
 <body>
-    <h1>てすとです！</h1>
+    <h1>テストです！</h1>
     <script>
         if ('serviceWorker' in navigator) {
           navigator.serviceWorker.register('./sw.js').then(function(registration) {

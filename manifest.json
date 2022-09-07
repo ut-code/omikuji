@@ -1,11 +1,11 @@
 {
-    "name"              : "PWA-TEST",
-    "short_name"        : "pwatst",
-    "description"       : "PWAのてすと",
+    "name"              : "PWA-TEST-APP",
+    "short_name"        : "PWA-TEST",
+    "description"       : "PWAのテスト",
     "start_url"         : "/?pwa=1",
     "display"           : "standalone",
-    "background_color"  : "#ff0000",
-    "theme_color"       : "#ff0000",
+    "background_color"  : "#00D372",
+    "theme_color"       : "#00D372",
     "icons": [{
         "src"           : "/icon-192.png",
         "sizes"         : "192x192",
