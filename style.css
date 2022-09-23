@@ -4,3 +4,7 @@ h1 {
     text-align: center;
     background-color: lightblue;
 }
+
+.setting-items {
+    margin-bottom: 20px;
+}
