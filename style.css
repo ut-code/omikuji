@@ -1,0 +1,10 @@
+h1 {
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: lightblue;
+}
+
+.setting-items {
+    margin-bottom: 20px;
+}
