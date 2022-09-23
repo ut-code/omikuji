@@ -16,13 +16,18 @@ sendButton.onclick = () => {
 }
 
 
+
 omikujiButton.onclick = () => {
+    // この直接.srcを変える切り替え方、絶対良くない（三つ出しといて隠すとか？）
     const r = Math.random();
     if (r < daikichi) {
-        omikujiImage.src = "./omikuji_daikichi.png"
+        omikujiImage.src = "./omikuji_daikichi.png";
+        setTimeout(() => {omikujiImage.src = "./omikuji-box.png"}, 1000);
     } else if (r < daikichi + kichi) {
-        omikujiImage.src = "./omikuji_kichi.png"
+        omikujiImage.src = "./omikuji_kichi.png";
+        setTimeout(() => {omikujiImage.src = "./omikuji-box.png"}, 1000);
     } else {
-        omikujiImage.src = "./omikuji_kyou.png"
+        omikujiImage.src = "./omikuji_kyou.png";
+        setTimeout(() => {omikujiImage.src = "./omikuji-box.png"}, 1000);
     }
 };
