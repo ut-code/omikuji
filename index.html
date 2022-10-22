@@ -1,62 +1,56 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="manifest" href="./manifest.json" />
+    <title>オリジナルアプリ作成画面</title>
   </head>
   <body>
-    <h1>オリジナルおみくじ作成アプリ</h1>
-
-    <h2>確率の調整</h2>
-    <ul>
-      <li>説明</li>
-    </ul>
-    <div class="setting-items">
-      <table>
-        <tr>
-          <th>大吉の確率</th>
-          <th>凶の確率</th>
-        </tr>
-        <tr>
-          <td>
-            <input
-              type="text"
-              id="daikichi"
-              placeholder="大吉の確率"
-              value="0.2"
-            />
-          </td>
-          <td>
-            <input type="text" id="kyou" placeholder="凶の確率" value="0.3" />
-          </td>
-        </tr>
-      </table>
-      <button id="send-button">反映</button>
+    <div class="wrapper">
+      <div class="edit-box">
+        <h1>オリジナルアプリを作ろう！</h1>
+        <table>
+          <tr>
+            <td>タイトル</td>
+            <td>
+              <input
+                type="text"
+                id="title-input"
+                placeholder="アプリのタイトルを入力"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>説明文</td>
+            <td>
+              <input
+                type="text"
+                id="caption-input"
+                placeholder="アプリの説明を入力"
+              />
+            </td>
+          </tr>
+        </table>
+        <div><button id="reflect-button">反映</button></div>
+        <table>
+          <tr>
+            <td>ボックスを追加</td>
+            <td><button id="add-result-button">ボックスを追加する</button></td>
+          </tr>
+        </table>
+        <a href="./sample">サンプルページ(作業用)</a>
+      </div>
+      <div class="preview-box">
+        <h2>プレビュー</h2>
+        <iframe
+          src="./preview.html"
+          width="312px"
+          height="675px"
+          id="iframe-elem"
+        ></iframe>
+      </div>
     </div>
-
-    <h2>プレビュー</h2>
-    <div class="img-box">
-      <img id="omikuji-image" src="./omikuji-box.png" alt="おみくじの箱" />
-    </div>
-    <button id="omikuji-button">おみくじを引く</button>
-    <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker
-          .register("./sw.js")
-          .then(function (registration) {
-            console.log(
-              "ServiceWorker registration successful with scope: ",
-              registration.scope
-            );
-          })
-          .catch(function (err) {
-            console.log("ServiceWorker registration failed: ", err);
-          });
-      }
-    </script>
-    <script src="./script.js"></script>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>

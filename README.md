@@ -1,3 +1,3 @@
 # kf-pwa
 
-<https://omikuji-pwa.onrender.com>
+<https://kf-pwa.onrender.com/>
