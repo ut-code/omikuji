@@ -25,3 +25,7 @@
 table {
   margin: 20px 0px;
 }
+
+#hidden-templates div {
+  display: none;
+}
