@@ -1,0 +1,19 @@
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+    background-color: lightblue;
+}
+
+.setting-items {
+    margin-bottom: 20px;
+}
+
+
+.img-box {
+    height: 420px;
+    width: 420px;
+}

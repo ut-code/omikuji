@@ -1,19 +1,27 @@
-body {
-    font-family: sans-serif;
+.wrapper {
+  display: flex;
 }
 
-h1 {
-    font-weight: bold;
-    text-align: center;
-    background-color: lightblue;
+.edit-box {
+  width: 50%;
 }
 
-.setting-items {
-    margin-bottom: 20px;
+#result-wrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
+.sample-box {
+  background-color: lightpink;
+  width: 200px;
+  height: 200px;
+}
 
-.img-box {
-    height: 420px;
-    width: 420px;
+#reflect-button {
+  margin: 0px 10px 0px 100px;
+}
+
+table {
+  margin: 20px 0px;
 }
