@@ -1,9 +1,12 @@
 const iframeElem = document.getElementById("iframe-elem");
 
 const reflectButton = document.getElementById("reflect-button");
-const addResultButton = document.getElementById("add-result-button");
+const addOmikujiButton = document.getElementById("add-omikuji-button");
+const removeOmikujiButton = document.getElementById("remove-omikuji-button");
 const titleInput = document.getElementById("title-input");
 const captionInput = document.getElementById("caption-input");
+
+const hiddenTemplates = document.getElementById("hidden-templates");
 
 window.onload = () => {
   const titleOutput = iframeElem.contentDocument.getElementById("title-output");
@@ -15,12 +18,13 @@ window.onload = () => {
     titleOutput.textContent = titleInput.value;
     captionOutput.textContent = captionInput.value;
   };
-  addResultButton.onclick = () => {
-    let resultBox = document.createElement("div");
-    resultBox.style.width = "200px";
-    resultBox.style.height = "200px";
-    resultBox.style.backgroundColor = "lightgreen";
-    resultBox.textContent = "ここに結果が表示されます";
-    resultWrapper.appendChild(resultBox);
+  addOmikujiButton.onclick = () => {
+    const omikujiTemplate = document.getElementById("omikuji-template");
+    resultWrapper.appendChild(omikujiTemplate);
+  };
+  removeOmikujiButton.onclick = () => {
+    const omikujiTemplateInPreview =
+      iframeElem.contentDocument.getElementById("omikuji-template");
+    hiddenTemplates.appendChild(omikujiTemplateInPreview);
   };
 };

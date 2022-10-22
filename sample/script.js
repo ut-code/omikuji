@@ -14,7 +14,6 @@ sendButton.onclick = () => {
 };
 
 omikujiButton.onclick = () => {
-  // この直接.srcを変える切り替え方、絶対良くない（三つ出しといて隠すとか？）
   const r = Math.random();
   if (r < daikichi) {
     omikujiImage.src = "./img/omikuji_daikichi.png";

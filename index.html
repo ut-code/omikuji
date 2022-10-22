@@ -9,7 +9,7 @@
   <body>
     <div class="wrapper">
       <div class="edit-box">
-        <h1>オリジナルアプリを作ろう！</h1>
+        <h1 id="editor-title">オリジナルアプリを作ろう！</h1>
         <table>
           <tr>
             <td>タイトル</td>
@@ -35,10 +35,47 @@
         <div><button id="reflect-button">反映</button></div>
         <table>
           <tr>
-            <td>ボックスを追加</td>
-            <td><button id="add-result-button">ボックスを追加する</button></td>
+            <td>[おみくじ]のテンプレート</td>
+            <td><button id="add-omikuji-button">追加</button></td>
+            <td><button id="remove-omikuji-button">削除</button></td>
           </tr>
         </table>
+        <div id="hidden-templates">
+          <div id="omikuji-template">
+            <div class="img-box">
+              <img
+                id="omikuji-image"
+                src="./sample/img/omikuji-box.png"
+                alt="おみくじの箱"
+              />
+            </div>
+            <button id="omikuji-button">おみくじを引く</button>
+            <script>
+              const omikujiButton = document.getElementById("omikuji-button");
+              const omikujiImage = document.getElementById("omikuji-image");
+
+              omikujiButton.onclick = () => {
+                const r = Math.random();
+                if (r < 0.3) {
+                  omikujiImage.src = "./sample/img/omikuji_daikichi.png";
+                  setTimeout(() => {
+                    omikujiImage.src = "./sample/img/omikuji-box.png";
+                  }, 1000);
+                } else if (r < 0.7) {
+                  omikujiImage.src = "./sample/img/omikuji_kichi.png";
+                  setTimeout(() => {
+                    omikujiImage.src = "./sample/img/omikuji-box.png";
+                  }, 1000);
+                } else {
+                  omikujiImage.src = "./sample/img/omikuji_kyou.png";
+                  setTimeout(() => {
+                    omikujiImage.src = "./sample/img/omikuji-box.png";
+                  }, 1000);
+                }
+              };
+            </script>
+          </div>
+        </div>
         <a href="./sample">サンプルページ(作業用)</a>
       </div>
       <div class="preview-box">
