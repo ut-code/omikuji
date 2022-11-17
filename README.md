@@ -1,3 +1,2 @@
-# おみくじアプリ
-
-<https://omikuji-pwa.onrender.com/>
+# kf-pwa
+<https://kf-pwa.onrender.com/>
