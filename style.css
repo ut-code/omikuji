@@ -1,31 +1,6 @@
-.wrapper {
-  display: flex;
-}
-
-.edit-box {
-  width: 50%;
-}
-
-#result-wrapper {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-
-.sample-box {
-  background-color: lightpink;
-  width: 200px;
-  height: 200px;
-}
-
-#reflect-button {
-  margin: 0px 10px 0px 100px;
-}
-
-table {
-  margin: 20px 0px;
-}
-
-#hidden-templates div {
-  display: none;
+h1 {
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: lightblue;
 }
